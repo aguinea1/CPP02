@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/22 12:04:49 by aguinea           #+#    #+#             */
-/*   Updated: 2025/05/25 19:52:43 by aguinea          ###   ########.fr       */
+/*   Created: 2025/05/22 12:03:05 by aguinea           #+#    #+#             */
+/*   Updated: 2025/05/25 20:40:06 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Fixed_HPP
-# define Fixed_HPP
-# include <iostream>
-# include <new>
-# include <string>
-
-class Fixed
+#include <iostream>
+#include "Fixed.hpp"
+#include "Point.hpp"
+int main( void )
 {
-	private:
-		int	store;
-		static const int frac_bits = 8;
-	public:
+	Point a(0, 0);
+    Point b(10, 0);
+    Point c(0, 10);
 
-		Fixed();
-		Fixed(const Fixed& other);
-		Fixed& operator=(const Fixed& other);
-        ~Fixed();
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
-};
+    Point inside(3, 3);
+    Point edge(0, 0);
+    Point outside(10, 10);
 
-#endif
-
+    std::cout << "Inside: " << bsp(a, b, c, inside) << std::endl;
+    std::cout << "Edge: " << bsp(a, b, c, edge) << std::endl;
+	std::cout << "Outside: " << bsp(a, b, c, outside) << std::endl;
+}

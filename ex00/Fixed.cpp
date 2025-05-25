@@ -6,13 +6,12 @@
 /*   By: aguinea <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 12:22:02 by aguinea           #+#    #+#             */
-/*   Updated: 2025/05/22 12:50:48 by aguinea          ###   ########.fr       */
+/*   Updated: 2025/05/25 19:52:51 by aguinea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int Fixed::frac_bits = 8;
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" <<std::endl;
